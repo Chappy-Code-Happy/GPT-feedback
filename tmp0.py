@@ -8,11 +8,11 @@ def solution(numbers, target):
             if total==target:
                 answer+=1
             return
-        if i < len(numbers):
-            dfs(i+1,total+numbers[i])    
-            dfs(i+1,total-numbers[i])
+        dfs(i+1,total+numbers[i])    
+        dfs(i+1,total-numbers[i])
         return
     
     dfs(0,0)
     return answer
+
 print(solution([1, 1, 1, 1, 1], 3))
